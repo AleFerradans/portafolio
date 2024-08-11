@@ -1,0 +1,58 @@
+---
+import Social2 from "./Social-2.astro";
+---
+
+<section id="Contacto" class="flex items-center justify-center flex-col bg-gradient-to-r
+from-black via-blue-950/20 to-black px-10 sm:px-0 md:px-0 ">
+    <article
+        class="flex flex-col sm:flex-col md:flex-row lg:flex-row overflow-hidden
+         rounded-md my-14 w-full sm:w-[450px] md:w-auto lg:w-auto">
+
+            <div class="block overflow-hidden px-5 py-20 md:py-0 md:px-0 lg:py-0 lg:px-0 md:w-[350px] sm:w-auto lg:w-[400px] bg-contacto bg-cover bg-center">
+                <h3 class="text-3xl font-extralight tracking-wider text-center md:text-3xl lg:text-3xl py-5 font-dm mix-blend-difference">
+                    Contacto
+                </h3>
+                <Social2/>
+            </div>
+
+            <form id="form" class="flex flex-col md:grid-flow-row lg:grid-flow-row py-8 px-7 md:px-10 md:py-8 lg:py-8 lg:px-10 w-full sm:w-full md:w-[350px] lg:w-[400px] bg-gradient-to-tr
+            from-black  to-blue-800/30 shadow-xl pt-10" action="" method="POST">
+
+                <div class="relative z-0 mb-6">
+                    <input name="nombre" type="text" required id="floating_standard" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                    <label for="name" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Nombre*</label>
+                </div>
+                    
+                <div class="relative z-0 mb-6">
+                    <input name="email" type="email" required id="floating_standard" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" />
+                    <label for="email" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Email*</label>
+                </div>
+
+                <div class="relative z-0 mb-6">
+                    <input name="telefono" type="number" id="floating_standard" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-b-2 border-white appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" />
+                    <label for="telefono" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Teléfono</label>
+                </div>
+
+                <div class="relative z-0 mb-6">
+                    <input name="asunto" type="text" id="floating_standard" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" />
+                    <label for="asunto" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Asunto</label>
+                </div>
+
+                <textarea name="mensaje" id="message" rows="7" class="block mb-5 p-2 resize-y outline-none w-full text-sm text-gray-900 bg-blue-950/20 focus:bg-blue-950/10 transition-all border-b-2 border-white focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Deje su mensaje..."></textarea>
+
+                <input class="cursor-pointer sm:text-sm flex justify-center items-center
+                px-2 mr-4 gap-2 py-2
+                border-2 mt-4 border-gray-400 border-solid rounded-full
+                hover:scale-105 transition-all hover:bg-gradient-to-r
+                from-blue-600/25 via-indigo-600/25 to-purple-600/25
+                active:translate-y-1 tracking-wide text-sm" 
+                type="submit" value="Enviar">
+                
+
+
+            </form>
+            <a class="opacity-0" href="mailto:webdeveloper@alexisferradans.com" id="button"></a>
+    </article>
+</section>
+
+

@@ -1,0 +1,112 @@
+---
+import MenuResponsive from "./MenuResponsive.astro";
+---
+
+<header id="header" class="
+sm:bg-transparent 
+md:bg-transparent
+lg:bg-transparent
+xl:bg-transparent
+grid grid-flow-row pt-10 pb-8 w-full xl:w-[1120px] mx-auto">
+
+<!-- Logo -->
+    <a class="absolute left-7 top-8 lg:left-28 lg:top-7 w-auto hover:opacity-80 transition hover:scale-105" href="#sobre-mi">
+        <img class="w-28 lg:w-32" src="/Alexislogolight.svg" alt="Alexis logo">
+    </a>
+    <MenuResponsive/>
+
+    <div class="hidden transition-all cursor-pointer fixed bottom-0 left-0 w-screen h-[65vh]"
+    id="back_menu">
+    </div>
+
+    <!-- Navbar -->
+    <nav id="nav" style="animation: fade-down 0.5s ease-in-out;" class="hidden pt-4 transition-all 
+    sm:flex sm:pt-0 sm:justify-center sm:bg-transparent
+    opacity-90">
+
+        <ul class="flex flex-col pt-8 items-center gap-8
+        sm:flex-row sm:py-0
+        md:flex-row md:py-0
+        lg:flex-row lg:py-0
+        xl:flex-row xl:py-0">
+            <li>
+                <a id="nav-link" class="text-base sm:text-base md:text-base lg:text-lg border-b-2 border-transparent border-solid px-2  active:translate-y-1 transition-all" href="#sobre-mi">Sobre mi</a>
+            </li>
+            <li>
+                <a id="nav-link" class="text-base sm:text-base md:text-base lg:text-lg  border-b-2 border-transparent border-solid px-2  active:translate-y-1 transition-all" href="#Proyectos">Proyectos</a>
+            </li>
+            <li>
+                <a class="text-base sm:text-base md:text-base lg:text-lg border-b-2 hover:border-blue-600 active:translate-y-1 transition-all duration-200 border-2 border-solid px-2
+              border-blue-800 rounded-full " href="#Contacto">Contacto</a>
+            </li>
+            
+        </ul>
+        
+    </nav>
+
+    
+
+
+</header>
+
+<style>
+    @keyframes fade-down {
+        from {
+            opacity: 0;
+            transform: translateY(-30px) scale(0.9);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0px) scale(1);
+        }
+    }
+
+
+    *:before,
+    *:after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    #nav-link {
+        position: relative;
+        letter-spacing: 0.5px;
+    }
+
+    #nav-link:after {
+        content: "";
+        position: absolute;
+        background-color: #c2c5cb;
+        height: 2px;
+        width: 0%;
+        left: 0;
+        bottom: 0px;
+        transition: all 0.3s ease;
+    }
+
+    #nav-link:hover::after {
+        width: 100%;
+    }
+</style>
+
+<script>
+    document.getElementById("btn_menu").addEventListener("click", show_menu);
+    document.getElementById("back_menu").addEventListener("click", hidden_menu);
+  
+  
+    const nav = document.getElementById("nav");
+    const back_menu = document.getElementById("back_menu");
+  
+    function show_menu(){
+      nav.style.display = "block";
+      back_menu.style.display = "block";
+    }
+
+    function hidden_menu(){
+      nav.style.display = "none";
+      back_menu.style.display = "none";
+    }
+
+  </script>
